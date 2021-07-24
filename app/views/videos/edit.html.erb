@@ -1,6 +1,13 @@
-<h1>Editing Video</h1>
+<section class="mb-8"> 
+  <p id="notice"><%= notice %></p>
+
+  <div class="flex justify-between items-end">
+    <h1 class="text-xl mt-6 mb-2">Alterar vídeo</h1> 
+  </div>
 
 <%= render 'form', video: @video %>
 
 <%= link_to 'Show', @video %> |
 <%= link_to 'Back', videos_path %>
+
+</section>

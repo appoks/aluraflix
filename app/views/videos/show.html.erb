@@ -1,6 +1,12 @@
-<p id="notice"><%= notice %></p>
 
-<p>
+
+<p><section class="mb-8"> 
+  <p id="notice" class="border-red"><%= notice %></p>
+
+  <div class="flex justify-between items-end">
+    <h1 class="text-xl mt-6 mb-2">Detalhes do vídeo</h1> 
+  </div>
+
   <strong>Title:</strong>
   <%= @video.title %>
 </p>
@@ -19,6 +25,8 @@
   <strong>Thumb:</strong>
   <%= @video.thumb %>
 </p>
+
+</section>
 
 <%= link_to 'Edit', edit_video_path(@video) %> |
 <%= link_to 'Back', videos_path %>

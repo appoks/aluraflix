@@ -17,6 +17,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <%= render "partials/navbar" %>
+    </header>
+
+    <main class="container mx-auto">
+      <%= yield %>
+    </main>
+
   </body>
 </html>

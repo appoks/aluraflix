@@ -1,0 +1,18 @@
+<article class="border-rose-900 rounded border mx-3 my-3 max-w-xl flex justify-between flex-col shadow-xl">
+    <section class="px-5 py-5">
+        <h2 class="text-rose-900 font-bold pb-3"><%= video.title %></h2>
+        <iframe class=" mx-auto" width="100%" height="350" src="https://www.youtube.com/embed/6YQve3KUqJs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <div class="flex justify-between flex-col">
+            <p class="text-gray-600 pb-2 pl-2 mt-6"><%= video.description %></p>
+            <!-- <a href="#" class="underline text-rose-600 pb-2 pl-2 mt-6">Ir para o vídeo -></p> -->
+        </div>
+
+    </section>
+
+    <div class="flex justify-end px-3 content-end">
+        <button class="bg-white border rounded border-rose-900 text-rose-900 font-bold py-2 px-5 my-5 mx-2"><%= link_to 'Exibir', video %></button>
+        <button class="bg-white border rounded border-rose-900 text-rose-900 font-bold py-2 px-5 my-5 mx-2"><%= link_to 'Editar', edit_video_path(video) %></button>
+        <button class="bg-red-700 border rounded border-red-900 text-white font-bold py-2 px-5 my-5 mx-2"><%= link_to 'Remover', video, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+    </div>
+</article>
