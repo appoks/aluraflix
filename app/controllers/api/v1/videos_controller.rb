@@ -8,13 +8,12 @@ module Api
         render json: @videos = Video.all
       end
 
-      def new
-        @video = Video.new
+      def show
+        render json: @video
       end
 
       def create
         @video = Video.new(video_params)
-
         if @video.save
           render json: @video
         else
@@ -31,14 +30,12 @@ module Api
       end
 
       def destroy
-        if @video.destroy
-          render json: @video
-        else
-          render json: @video.errors, status: :bad_request
-        end
+        @video.destroy
+        render json: @video
       end
 
       private
+      
       # Use callbacks to share common setup or constraints between actions.
       def set_video
         @video = Video.find(params[:id])

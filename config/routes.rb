@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  constraints :subdomain => 'api' do
-    namespace :api, path: nil, defaults: {format: 'json'} do
-      scope module: :v1 do #, constraints: ApiConstraints.new(version: 1, default: true) do
-        resources :videos
+  constraints :subdomain => 'api', constraints: { format: :json } do
+    namespace :api, path: nil, defaults: {format: :json} do
+      scope module: :v1, constraints: { format: :json } do
+        resources :videos, constraints: { format: :json }
       end
     end
   end
