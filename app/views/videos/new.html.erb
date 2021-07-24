@@ -1,4 +1,4 @@
-<section class="mb-8"> 
+<section class="mb-8 w-1/3 mx-auto"> 
   <p id="notice"><%= notice %></p>
 
   <div class="flex justify-between items-end">
@@ -7,9 +7,8 @@
 
   <%= render 'form', video: @video %>
 
-  <div class="actions">
-    <%= link_to 'Back', videos_path %>
-  </div>
+    <button class="bg-white border rounded border-rose-900 text-rose-900 font-bold py-2 px-5 my-5"><%= link_to 'Voltar', videos_path %></button>
+
 
 </section>
 

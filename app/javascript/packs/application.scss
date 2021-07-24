@@ -8,15 +8,19 @@
 
 .field label {
     display: block;
+    @apply mt-2
 }
 
 .field input {
-    @apply border border-gray-500 rounded-md px-4 py-2;
+    @apply border border-gray-500 rounded-md px-4 py-2 mb-2;
+    width: 100%;
 
 }
 
 .field textarea {
     @apply border border-gray-500 rounded-md px-4 py-2;
+    width: 100%;
+    height: 150px;
 
 }
 
