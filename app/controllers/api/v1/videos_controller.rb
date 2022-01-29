@@ -4,6 +4,10 @@ module Api
 
       before_action :set_video, only: %i[ show edit update destroy ]
 
+      def free
+        render json: @videos = Video.last(5)
+      end
+      
       def index
         render json: @videos = Video.all
       end
